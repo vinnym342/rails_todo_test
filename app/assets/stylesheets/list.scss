@@ -1,0 +1,14 @@
+// Place all the styles related to the list controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.list_table .top th{
+  font-weight: 600;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.list_table .content th{
+  font-weight: normal;
+  border-right: 1px solid black;
+}

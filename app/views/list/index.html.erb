@@ -1,0 +1,21 @@
+<table class='list_table'>
+  <tr class='top'>
+    <th>Task</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Priority</th>
+  </tr>
+  <% @todos.sort_by{|todo| todo[:priority]}.each do |todo| %>
+  <tr class='content'>
+    <td><%=todo.task%></td>
+    <td><%=todo.date%></td>
+    <td><%=todo.time%></td>
+    <td><%=todo.priority%></td>
+    <td><%= link_to 'Edit', edit_item_path(todo) %></td>
+    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</table>
+<!-- In model add method if too late -->
+
+<%= link_to 'New Item', new_item_path %>
